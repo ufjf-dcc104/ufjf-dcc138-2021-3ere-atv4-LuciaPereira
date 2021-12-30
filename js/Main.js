@@ -1,6 +1,16 @@
 import Cena from "./Cena.js"
-console.log("Hello, Word");
+import Sprite from "./Sprite.js";
+
 const canvas = document.querySelector("canvas");
-console.log(canvas);
+const ctx = canvas.getContext("2d");
 const cena1 = new Cena(canvas);
 cena1.desenhar();
+
+const pc = new Sprite();
+const en1 = new Sprite(x:140,w:30,color:"red");
+
+en1.color = "red";
+en1.x = 140;
+
+pc.desenhar(ctx);
+en1.desenhar(ctx);
