@@ -2,7 +2,7 @@ export default class Cena{
     /* E responsavel por desenhar elementos na tela eum uma animaçãco
     */
    
-    constructor(canvas){
+    constructor(canvas, assets = null){
         this.canvas = this.canvas;
         this.ctx = canvas.getContext("2d");
         this.sprites = [];
@@ -10,6 +10,7 @@ export default class Cena{
         this.t0 = 0;
         this.dt = 0;
         this.idAdnin =  null;
+        this.assets = assets;
     }
     desenhar(){
         this.ctx.fillStyle = "grey";
@@ -19,6 +20,8 @@ export default class Cena{
             sprite.desenhar(this.ctx);
             
         }
+        this.ctx.fillStyle = "yellow";
+        this.ctx.fillText(this.assets?.progresso(),10,20);
     }
     adicionar(sprite){
         this.sprites.push(sprite);
