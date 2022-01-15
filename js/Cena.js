@@ -14,13 +14,12 @@ export default class Cena{
     }
     desenhar(){
         this.ctx.fillStyle = "grey";
-        this.ctx.fillRect(0,0,this.canvas.width, this.canvas.height);
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
         if(this.assets.acabou()){
             for (let s = 0; s < this.sprites.length; s++) {
             const sprite = this.sprites[s];
             sprite.desenhar(this.ctx);
-            }
-            
+            }            
         }
         this.ctx.fillStyle = "yellow";
         this.ctx.fillText(this.assets?.progresso(),10,20);
