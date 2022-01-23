@@ -15,8 +15,11 @@ assets.carregaImagem("esqueleto","assets/garoto.png");
 assets.carregaImagem("orc","assets/orc.png");
 assets.carregaAudio("moeda","assets/coin.wav");
 assets.carregaAudio("boom","assets/boom.wav");
-assets.carregaImagem("cow","assets/cow.png");
-assets.carregaImagem("chicken","assets/chicken.png");
+assets.carregaImagem("ghost","assets/ghost.png");
+assets.carregaImagem("dragon","assets/dragon.png");
+assets.carregaImagem("arvore","assets/arvore.png");
+assets.carregaImagem("clay","assets/clay.png");
+assets.carregaAudio("hurt","assets/hurt.wav");
 
 
 const canvas = document.querySelector("canvas");
@@ -82,6 +85,9 @@ document.addEventListener("keydown" , (e)=>{
                     case "b":
                         assets.play("boom");
                         break;
+                        case "a":
+                            assets.play("hurt");
+                            break;
 
      
     }
