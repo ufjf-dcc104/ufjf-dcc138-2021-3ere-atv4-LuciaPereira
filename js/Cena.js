@@ -2,7 +2,7 @@ export default class Cena{
     /* E responsavel por desenhar elementos na tela eum uma animaçãco
     */
    
-    constructor(canvas, assets = null){
+    constructor(canvas, assets){
         this.canvas = canvas;
         this.ctx = canvas.getContext("2d");
         this.sprites = [];
@@ -12,6 +12,7 @@ export default class Cena{
         this.idAdnin =  null;
         this.assets = assets;
         this.mapa = null;
+        
     }
     desenhar(){
         this.ctx.fillStyle = "lightblue";
@@ -69,6 +70,7 @@ export default class Cena{
             for (let b = a + 1; b < this.sprites.length; b++) {
                 const spriteB = this.sprites[b];
                 if (spriteA.colidiuCom(spriteB)) {
+                    this.assets.play("hurt");
                     this.quandoColidir(spriteA,spriteB); 
                 }
                            
