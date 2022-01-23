@@ -70,6 +70,22 @@ cena1.adicionar(new Sprite({x:115,y:70, vy:10,color:"red",controlar:perseguePC})
 cena1.adicionar(new Sprite({x:115,y:160, vy:-10,color:"red",controlar:perseguePC}));
 
 cena1.iniciar();
+novoInimigo();
+
+function novoInimigo()
+{
+    let n1 = 0, n2 = 0;
+    while (mapa1.tiles[n1][n2] !== 0)
+    {
+        n1 = Math.floor(Math.random() * (mapa1.LINHAS - 1 + 1) + 1);
+        n2 = Math.floor(Math.random() * (mapa1.COLUNAS - 1 + 1) + 1);
+    }
+    const en1 = (new Sprite({x: n1* 32 + 32 / 2, y: n2 * 32 + 32 / 2, color: "black", controlar: perseguePC}));
+        
+    cena1.adicionar(en1);
+    setTimeout(novoInimigo, 10000);
+    
+}
 
 document.addEventListener("keydown" , (e)=>{
     switch (e.key) {

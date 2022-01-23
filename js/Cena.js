@@ -96,4 +96,5 @@ export default class Cena{
         this.mapa = mapa;
         this.mapa.cena = this;
     }
+   
 }
