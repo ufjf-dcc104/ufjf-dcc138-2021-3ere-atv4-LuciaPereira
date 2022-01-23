@@ -3,7 +3,7 @@ export default class Cena{
     */
    
     constructor(canvas, assets = null){
-        this.canvas = this.canvas;
+        this.canvas = canvas;
         this.ctx = canvas.getContext("2d");
         this.sprites = [];
         this.aRemover = [];
@@ -56,7 +56,7 @@ export default class Cena{
         this.t0 = t;
     }
     iniciar(){
-        this.idAdnin = requestAnimationFrame((t) => {this.quadro(t);});
+        this.idAdnin = requestAnimationFrame((t) =>{ this.quadro(t);});
     }
     parar(){
         cancelAnimationFrame(this.idAdnin);

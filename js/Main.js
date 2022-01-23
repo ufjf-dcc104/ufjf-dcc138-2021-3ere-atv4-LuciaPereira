@@ -44,18 +44,18 @@ pc.controlar = function(dt){
         this.vx = 0;
     }
     if(input.comandos.get("MOVE_CIMA")){
-        this.vx = -50;
+        this.vy = -50;
     }else if(input.comandos.get("MOVE_BAIXO")){
-        this.vx = +50;
+        this.vy = +50;
     }else{
-        this.vx = 0;
+        this.vy = 0;
     }
 };
 cena1.adicionar(pc);
 
 function perseguePC(dt){
     this.vx = 25 * Math.sign(pc.x - this.x);
-    this.vy = 50 * Math.sign(pc.y - this.y);
+    this.vy = 25 * Math.sign(pc.y - this.y);//
 }
 
 const en1 = new Sprite({x:360, color:"red",controlar:perseguePC});

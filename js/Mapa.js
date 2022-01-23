@@ -4,6 +4,7 @@ export default class Mapa{
         this.COLUNAS = colunas;
         this.SIZE = tamanho;
         this.tiles = [];
+
         for (let l =0;l < this.LINHAS;l++) {
             this.tiles[l] = [];
             for (let c = 0; c < this.COLUNAS; c++) {
@@ -12,10 +13,10 @@ export default class Mapa{
             }
             
         }this.cena = null;
+        this.mapa = null;
     }
     desenhar(ctx){
         for (let l =0;l < this.LINHAS;l++) {
-            this.tiles[l] = [];
             for (let c = 0; c < this.COLUNAS; c++) {
                 switch(this.tiles[l][c] ){
                     case 1:
@@ -44,6 +45,7 @@ export default class Mapa{
         this.LINHAS = modelo.length;
         this.COLUNAS = modelo[0]?.length ?? 0;
         this.tiles = [];
+        
         for (let l =0;l < this.LINHAS;l++) {
             this.tiles[l] = [];
             for (let c = 0; c < this.COLUNAS; c++) {
@@ -51,4 +53,4 @@ export default class Mapa{
             }
         }
     }
-}
+};
