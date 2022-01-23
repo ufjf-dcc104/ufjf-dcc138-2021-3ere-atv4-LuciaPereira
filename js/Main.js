@@ -15,11 +15,13 @@ assets.carregaImagem("esqueleto","assets/garoto.png");
 assets.carregaImagem("orc","assets/orc.png");
 assets.carregaAudio("moeda","assets/coin.wav");
 assets.carregaAudio("boom","assets/boom.wav");
+assets.carregaImagem("cow","assets/cow.png");
+assets.carregaImagem("chicken","assets/chicken.png");
 
 
 const canvas = document.querySelector("canvas");
-canvas.width = 14*32;
-canvas.height = 10*32;
+canvas.width = 16*32;
+canvas.height = 14*32;
 
 input.configurarTeclado({
     "ArrowLeft" : "MOVE_ESQUERDA",
@@ -30,7 +32,7 @@ input.configurarTeclado({
 
 const cena1 = new Cena(canvas, assets);
 
-const mapa1 = new Mapa(10,14,32);
+const mapa1 = new Mapa(14,16,32);
 mapa1.carregaMapa(modeloMapa1);
 cena1.configuraMapa(mapa1);
 

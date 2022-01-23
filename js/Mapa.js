@@ -1,5 +1,5 @@
 export default class Mapa{
-    constructor(linhas=8, colunas=12, tamanho=32){
+    constructor(linhas=12, colunas=14, tamanho=32){
         this.LINHAS = linhas;
         this.COLUNAS = colunas;
         this.SIZE = tamanho;
@@ -36,7 +36,6 @@ export default class Mapa{
                 }
                 ctx.fillRect(c * this.SIZE, l * this.SIZE,this.SIZE, this.SIZE);
                 ctx.strokeRect(c * this.SIZE, l * this.SIZE, this.SIZE, this.SIZE);
-                
             }
             
         }
